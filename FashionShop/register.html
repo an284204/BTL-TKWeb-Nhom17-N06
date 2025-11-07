@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đăng ký tài khoản - AQ Fashion Shop</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">AQStore</a>
+    </div>
+  </header>
+
+  <main class="container auth-page">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h2>Đăng ký tài khoản mới</h2>
+
+        <!-- Gọi handleRegister() khi bấm nút Đăng ký -->
+        <form id="registerForm" class="form" onsubmit="event.preventDefault(); handleRegister();">
+
+          <input 
+            type="text" 
+            id="regFullName" 
+            placeholder="Họ và tên" 
+            required 
+          />
+
+          <input 
+            type="date" 
+            id="regBirthDate" 
+            placeholder="Ngày sinh" 
+            required 
+          />
+
+          <input 
+            type="tel" 
+            id="regPhone" 
+            placeholder="Số điện thoại" 
+            required 
+            pattern="[0-9]{10,11}" 
+          />
+
+          <input 
+            type="text" 
+            id="regAddress" 
+            placeholder="Địa chỉ" 
+            required 
+          />
+
+          <input 
+            type="email" 
+            id="regEmail" 
+            placeholder="Email" 
+            required 
+          />
+
+          <input 
+            type="password" 
+            id="regPassword" 
+            placeholder="Mật khẩu (tối thiểu 6 ký tự)" 
+            required 
+            minlength="6" 
+          />
+
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+
+        <p class="center">
+          Đã có tài khoản? 
+          <a href="login.html" class="link">Đăng nhập ngay</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Nhúng script -->
+  <script src="js/main.js"></script>
+   <!-- ================= CUSTOM ALERT MODAL ================= -->
+  <!-- Thêm đoạn mã này vào đây -->
+  <div id="customAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+      <p id="customAlertMessage"></p>
+      <button id="customAlertOk" class="btn">OK</button>
+    </div>
+  </div>
+</body>
+</html>

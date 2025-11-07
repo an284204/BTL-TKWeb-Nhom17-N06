@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Thông tin cá nhân - AQ Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">AQStore</a>
+        </div>
+    </header>
+
+    <main class="container auth-page">
+        <div class="auth-wrap">
+            <div class="auth-card">
+                <h2>Cập nhật thông tin cá nhân</h2>
+
+                <form id="profileForm" class="form" onsubmit="event.preventDefault(); handleProfileUpdate();">
+                    <label for="profileFullName">Họ và tên</label>
+                    <input 
+                        type="text" 
+                        id="profileFullName" 
+                        placeholder="Họ và tên" 
+                        required
+                        readonly 
+                        class="readonly-field"
+                    />
+
+                    <label for="profileBirthDate">Ngày sinh</label>
+                    <input 
+                        type="date" 
+                        id="profileBirthDate" 
+                        required 
+                    />
+
+                    <label for="profilePhone">Số điện thoại</label>
+                    <input 
+                        type="tel" 
+                        id="profilePhone" 
+                        placeholder="Số điện thoại" 
+                        required 
+                        pattern="[0-9]{10,11}"
+                    />
+
+                    <label for="profileAddress">Địa chỉ</label>
+                    <input 
+                        type="text" 
+                        id="profileAddress" 
+                        placeholder="Địa chỉ" 
+                        required 
+                    />
+
+                    <label for="profileEmail">Email</label>
+                    <input 
+                        type="email" 
+                        id="profileEmail" 
+                        placeholder="Email" 
+                        required 
+                    />
+
+                    <hr /> <label for="profileNewPassword">Mật khẩu mới (Để trống nếu không muốn thay đổi)</label>
+                    <input 
+                        type="password" 
+                        id="profileNewPassword" 
+                        placeholder="Mật khẩu mới (tối thiểu 6 ký tự)" 
+                        minlength="6" 
+                    />
+                    
+                    <label for="profileConfirmPassword">Nhập lại Mật khẩu mới</label>
+                    <input 
+                        type="password" 
+                        id="profileConfirmPassword" 
+                        placeholder="Nhập lại mật khẩu mới" 
+                        minlength="6" 
+                    />
+
+                    <button type="submit" class="btn">Cập nhật</button>
+                    <p id="profileMessage" class="message"></p>
+                </form>
+
+                <p class="center">
+                    <a href="index.html" class="link">Quay về trang chủ</a>
+                </p>
+                <button onclick="handleLogout()" class="btn btn-secondary">Đăng xuất</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadUserProfile();
+        });
+    </script>
+     <!-- ================= CUSTOM ALERT MODAL ================= -->
+  <!-- Thêm đoạn mã này vào đây -->
+  <div id="customAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+      <p id="customAlertMessage"></p>
+      <button id="customAlertOk" class="btn">OK</button>
+    </div>
+  </div>
+</body>
+</html>

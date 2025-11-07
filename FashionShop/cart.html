@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giỏ hàng - Aurora</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Aurora</a>
+       <nav class="category-bar" style="border:none; padding: 0;">
+          <a href="products.html" class="cat">Tiếp tục mua sắm</a>
+       </nav>
+      <div class="right-actions">
+        <a href="login.html" class="icon-btn account-icon" id="accountLink">👤</a>
+        <a href="cart.html" class="icon-btn">🛒 <span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container cart-page">
+    <h2>Giỏ hàng của bạn</h2>
+    
+    <!-- JavaScript sẽ đổ danh sách sản phẩm vào đây -->
+    <div id="cartItems" class="cart-list">
+      <!-- Loading... -->
+    </div>
+
+    <!-- JavaScript sẽ đổ phần tổng kết và nút bấm vào đây -->
+    <div id="cartSummary" class="cart-summary">
+      <!-- Summary content goes here -->
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div>© 2025 Aurora Boutique • Liên hệ: hello@aurora.test</div>
+  </footer>
+
+  <script src="js/main.js"></script> 
+   <!-- ================= CUSTOM ALERT MODAL ================= -->
+  <!-- Thêm đoạn mã này vào đây -->
+  <div id="customAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+      <p id="customAlertMessage"></p>
+      <button id="customAlertOk" class="btn">OK</button>
+    </div>
+  </div>
+</body>
+</html>

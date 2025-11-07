@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đăng nhập - AQ Fashion Shop</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">AQStore</a>
+    </div>
+  </header>
+
+  <main class="container auth-page">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <!-- Phần giới thiệu bên trái -->
+        <div class="auth-left">
+          <h2>Chào mừng đến AQ Fashion Shop</h2>
+          <p>Đăng nhập để quản lý đơn hàng hoặc đăng ký tài khoản mới.</p>
+          <div class="socials">
+            <button class="social google">Google</button>
+            <button class="social facebook">Facebook</button>
+          </div>
+        </div>
+
+        <!-- Phần form đăng nhập -->
+        <div class="auth-right">
+          <form id="loginForm" class="form" onsubmit="event.preventDefault(); handleLogin();">
+            <h3>Đăng nhập</h3>
+            
+            <input 
+              id="loginEmail" 
+              type="email" 
+              placeholder="Email" 
+              required 
+            />
+
+            <input 
+              id="loginPassword" 
+              type="password" 
+              placeholder="Mật khẩu" 
+              required 
+            />
+
+            <button type="submit" class="btn">Đăng nhập</button>
+          </form>
+
+          <hr/>
+
+          <p class="center">
+            Chưa có tài khoản?
+            <a href="register.html" class="link">Đăng ký ngay</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Nhúng script -->
+  <script src="js/main.js"></script>
+   <!-- ================= CUSTOM ALERT MODAL ================= -->
+  <!-- Thêm đoạn mã này vào đây -->
+  <div id="customAlert" class="custom-alert-overlay">
+    <div class="custom-alert-box">
+      <p id="customAlertMessage"></p>
+      <button id="customAlertOk" class="btn">OK</button>
+    </div>
+  </div>
+</body>
+</html>
